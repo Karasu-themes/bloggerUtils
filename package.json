@@ -1,7 +1,7 @@
 {
   "name": "blogger-utils",
   "version": "1.0.0",
-  "description": "Conjunto de utilidades para crear complementos para blogger entorno a los feed",
+  "description": "Conjunto de utilidades para la creación de plugins y complementos para blogger",
   "main": "index.js",
   "type": "module",
   "scripts": {
