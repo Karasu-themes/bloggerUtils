@@ -1,0 +1,7 @@
+# folder exclude
+node_modules
+
+# files exclude
+package-lock.json
+dist/*.html
+dist/data.blogger.js

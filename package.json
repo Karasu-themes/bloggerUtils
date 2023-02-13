@@ -1,0 +1,19 @@
+{
+  "name": "blogger-utils",
+  "version": "1.0.0",
+  "description": "Conjunto de utilidades para crear complementos para blogger entorno a los feed",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "author": "MarceloTLD",
+  "license": "MIT",
+  "dependencies": {
+    "@rollup/plugin-babel": "6.0.3",
+    "@rollup/plugin-node-resolve": "15.0.1",
+    "rollup-plugin-esbuild": "5.0.0",
+    "rollup-plugin-license": "3.0.1"
+  }
+}
