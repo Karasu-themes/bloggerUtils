@@ -1,9 +1,9 @@
 /**
- * Devuelve una serie de funciones para manipular la api localStorage de forma más compacta
+ * Devuelve una serie de funciones para manipular la api localStorage de forma más sencilla
  * @returns {Object}
  */
 export function storage () {
-
+  
   function create ( name, value ) {
     localStorage.setItem(name, value);
     return value
