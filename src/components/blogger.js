@@ -6,9 +6,8 @@ import { stripTags } from "./stripTags";
  * @returns {String}
  */
 export function postID(data) {
-  if (!data.id && /post-\d{1,}/g.test(data.id.$t) == false) return '';
-  const _ID = data.id.$t.match(/post-\d{1,}/g)[0];
-  return _ID.replace('post-', '');
+  const _ID = data.id.$t.match(/post-\d{1,}/g);
+  return _ID ? _ID[0].replace('post-', '') : '';
 }
 
 /**
@@ -17,9 +16,8 @@ export function postID(data) {
  * @returns {String}
  */
 export function blogID(data) {
-  if (!data.id && /blog-\d{1,}/g.test(data.id.$t) == false) return '';
-  const _ID = data.id.$t.match(/blog-\d{1,}/g)[0];
-  return _ID.replace('blog-', '');
+  const _ID = data.id.$t.match(/blog-\d{1,}/g);
+  return _ID ? _ID[0].replace('blog-', '') : '';
 }
 
 /**
