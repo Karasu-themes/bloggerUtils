@@ -8,7 +8,7 @@ export function parserAttr (content) {
     const regExp = /data-[\w-]+=[\"']+[^\"']+[\"']+/g;
     const matches = content.match(regExp);
   
-    if (matches.length == 0) return {};
+    if (!matches || matches.length == 0) return {};
     
     matches.forEach(n => {
       
