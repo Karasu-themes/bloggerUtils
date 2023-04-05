@@ -103,9 +103,9 @@ export function author (data) {
  */
 export function time (data) {
   return {
-    datePost: new Date(data.published.$t).toLocaleDateString(),
-    postUpdate: new Date(data.updated.$t).toLocaleDateString(),
-    datePostIso8601: data.published.$t,
+    datePost: data.published ? new Date(data.published.$t).toLocaleDateString() : "",
+    postUpdate: data.updated ? new Date(data.updated.$t).toLocaleDateString() : "",
+    datePostIso8601: data.updated.$t ?? data.published.$t,
   }
 } 
 
