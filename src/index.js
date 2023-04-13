@@ -6,6 +6,7 @@ import { storage } from "./components/storage";
 import { json } from "./components/json";
 import { template } from "./components/template";
 import { feed } from "./components/feed";
+import { typos } from "./components/typos";
 
 export {
   parser,
@@ -15,5 +16,6 @@ export {
   storage,
   json,
   template,
-  feed
+  feed,
+  typos
 }
