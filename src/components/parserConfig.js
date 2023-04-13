@@ -1,3 +1,5 @@
+import { typos } from "./typos";
+
 /**
  * Genera un objeto de configuración en base a una cadena de texto con una sintaxis especifica.
  * @param {String} strConfig 
@@ -14,7 +16,7 @@ export function parserConfig(strConfig) {
     const str = val;
     const key = str.replace(/\$|{(.*)}/g, '');
     const value = str.match(/{(.*)}/g)[0].replace(/{|}/g, '');
-    obj[key] = value;
+    obj[key] = typos(value);
   })
 
   return matches.length ? obj : {};
