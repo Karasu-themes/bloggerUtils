@@ -30,7 +30,7 @@ export function parser(data, config) {
     postID: postID(data, config),
     blogID: blogID(data, config),
     image: _FIRST_IMAGE,
-    thumbnail: thumbnail(data, (config.imageParams || "s74-c"), _FIRST_IMAGE),
+    thumbnail: thumbnail(data, _FIRST_IMAGE),
     body: body(data, config),
     summary: summary(_CONTENT, config.summary || 96),
     labels: labels(data),
