@@ -39,3 +39,17 @@ export function feed(data) {
   return script;
 
 }
+
+export function feedPost( { blogId, postId, cbName } ) {
+  const endpoint = `https://www.blogger.com/feeds/${blogId}/posts/default/${postId}?alt=json-in-script&callback=${cbName}`;
+  const script = document.createElement('script');
+  script.src = endpoint;
+  return script;
+}
+
+export function feedPostsList( { blogId, cbName, label, maxResults = 8 } ) {
+  const endpoint = `https://www.blogger.com/feeds/${blogId}/posts/default${label ? `/-/${label}` : ""}?alt=json-in-script&callback=${cbName}&max-results=${maxResults}`;
+  const script = document.createElement('script');
+  script.src = endpoint;
+  return script;
+}
