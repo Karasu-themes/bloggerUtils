@@ -5,14 +5,16 @@
  */
 export function parserAttr (content) {
     let obj = {};
-    const regExp = /data-[\w-]+=[\"']+[^\"']+[\"']+/g;
+    const regExp = /data-[\w-]+="([^"]+)"|data-[\w-]+='([^']+)'/g;
     const matches = content.match(regExp);
   
     if (!matches || matches.length == 0) return {};
     
     matches.forEach(n => {
-      
-      const value = n.match(/[\"'].+[\"']/)[0].replace(/\"|\'/g, '');
+      let value = n;
+
+      value = value.replace(/data-[\w-]+=/g, '');
+      value = value.replace(/^"|"$/g, '');
   
       const key = (n.match(/data-.+=/g)[0].replace(/data-|=/g, '')).replace(/-\w+/g, function (m) {
         const str = m.replace('-', '');
