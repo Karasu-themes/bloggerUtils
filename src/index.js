@@ -7,6 +7,7 @@ import { json } from "./components/json";
 import { template } from "./components/template";
 import { feed } from "./components/feed";
 import { typos } from "./components/typos";
+import { renderPost } from "./components/render-post";
 
 export {
   parser,
@@ -17,5 +18,6 @@ export {
   json,
   template,
   feed,
-  typos
+  typos,
+  renderPost
 }
