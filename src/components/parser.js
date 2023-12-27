@@ -20,7 +20,7 @@ import {
  * @returns {Object}
  */
 
-export function parser(data, config) {
+export function parser(data, config = {}) {
   const _CONTENT = body(data, config);
   const _FIRST_IMAGE = getFirstImage(_CONTENT, config.defaultImage || "#noImageFounded")
 
