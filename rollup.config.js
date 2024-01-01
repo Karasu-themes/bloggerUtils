@@ -4,7 +4,7 @@ import { minify } from 'rollup-plugin-esbuild'
 import rollupPluginLicense from 'rollup-plugin-license';
 
 const bannerLicense = `/*!
-* @karasu-themes/blogger-utils v1.4.4
+* @karasu-themes/blogger-utils v1.4.5
 * https://github.com/Karasu-themes/bloggerSection
 *
 * Copyright © ${new Date().getFullYear()} MarceloTLD
