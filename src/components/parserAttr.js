@@ -14,13 +14,12 @@ export function parserAttr (content) {
       let value = n;
 
       value = value.replace(/data-[\w-]+=/g, '');
-      value = value.replace(/^"|"$/g, '');
-  
+      value = value.replace(/^"|"$|^'|'$/g, '');
+
       const key = (n.match(/data-.+=/g)[0].replace(/data-|=/g, '')).replace(/-\w+/g, function (m) {
         const str = m.replace('-', '');
         return str[0].toUpperCase() + str.slice(1)
       });
-  
       obj[key] = value;
     });
   
